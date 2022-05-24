@@ -1,6 +1,20 @@
 import prisma from "../lib/prisma";
+import getWordOfTheDay from "./getWordOfTheDay";
 
 async function drawWordOfTheDay() {
+  const lastChosenWord = await getWordOfTheDay();
+
+  if (lastChosenWord) {
+    await prisma.word.update({
+      where: {
+        word: lastChosenWord.word,
+      },
+      data: {
+        wordOfTheDay: false,
+      },
+    });
+  }
+
   const eligibleWords = await prisma.word.findMany({
     where: {
       chosenBefore: false,
