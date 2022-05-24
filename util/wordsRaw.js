@@ -19754,4 +19754,4 @@ const wordsRaw = [
   "zuzins",
 ];
 
-module.exports = { wordsRaw };
+export default wordsRaw;

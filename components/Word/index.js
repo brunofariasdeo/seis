@@ -2,7 +2,7 @@ import { Grid, Snackbar } from "@material-ui/core";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import LetterInput from "../LetterInput";
-import words from "../../data/words";
+import wordsRaw from "../../util/wordsRaw";
 import styles from "./styles.module.scss";
 
 const ERROR_TO_MESSAGE = {
@@ -72,7 +72,7 @@ const Word = ({ isCurrentGuess, onGuessSubmit }) => {
         return;
       }
 
-      if (!words.includes(wordTyped)) {
+      if (!wordsRaw.includes(wordTyped)) {
         setError("notFound");
         return;
       }

@@ -10,6 +10,7 @@ const POSITION_TO_STYLE = {
   notFound: styles.notFound,
 };
 
+// eslint-disable-next-line react/display-name
 const LetterInput = forwardRef(
   (
     {

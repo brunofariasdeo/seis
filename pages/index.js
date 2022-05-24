@@ -1,10 +1,13 @@
 import { Grid } from "@material-ui/core";
 import { useState } from "react";
-import Word from "./components/Word";
+import getWordOfTheDay from "../util/getWordOfTheDay";
+import Word from "../components/Word";
 import styles from "./Index.module.scss";
 
 const App = () => {
   const [currentGuessIndex, setCurrentGuessIndex] = useState(0);
+
+  console.log(getWordOfTheDay());
 
   const onGuessSubmit = () => {
     setCurrentGuessIndex(currentGuessIndex + 1);
