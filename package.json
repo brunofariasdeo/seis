@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "draw": "node -r esm prisma/drawWordOfTheDay.js"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@prisma/client": "^3.14.0",
     "clsx": "^1.1.1",
+    "esm": "^3.2.25",
     "next": "12.1.6",
     "node-sass": "^7.0.1",
     "react": "18.1.0",
