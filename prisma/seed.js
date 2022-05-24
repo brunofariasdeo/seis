@@ -4,13 +4,25 @@ const { wordsObjects } = require("./wordsObjects");
 const prisma = new PrismaClient();
 
 async function main() {
-  for (let word of wordsObjects) {
-    if (word.eligible) {
-      await prisma.word.create({
-        data: word,
-      });
-    }
-  }
+  const data = wordsObjects.filter((word) => word.eligible);
+
+  await prisma.$transaction(
+    data.map((word) =>
+      prisma.word.upsert({
+        where: {
+          word: word.word,
+        },
+        update: {
+          chosenBefore: word.chosenBefore,
+          wordOfTheDay: word.wordOfTheDay,
+        },
+        create: {
+          word: word.word,
+          eligible: word.eligible,
+        },
+      })
+    )
+  );
 }
 
 main()
