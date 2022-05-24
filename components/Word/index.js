@@ -19,7 +19,7 @@ const NUMBER_TO_POSITION = {
   6: "sixthLetter",
 };
 
-const Word = ({ isCurrentGuess, onGuessSubmit }) => {
+const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [error, setError] = useState("");
   const [isSubmitted, setIsSubmmited] = useState(false);
@@ -29,7 +29,7 @@ const Word = ({ isCurrentGuess, onGuessSubmit }) => {
   const { getValues, handleSubmit, register, setValue } = useForm();
   const lettersRef = useRef([]);
 
-  const word = "abismo";
+  const word = wordOfTheDay;
 
   const checkPosition = (index) => {
     if (isSubmitted) {

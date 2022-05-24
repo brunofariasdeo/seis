@@ -1,13 +1,11 @@
 import { Grid } from "@material-ui/core";
 import { useState } from "react";
-import getWordOfTheDay from "../util/getWordOfTheDay";
 import Word from "../components/Word";
+import getWordOfTheDay from "../prisma/getWordOfTheDay";
 import styles from "./Index.module.scss";
 
-const App = () => {
+const App = ({ wordOfTheDay }) => {
   const [currentGuessIndex, setCurrentGuessIndex] = useState(0);
-
-  console.log(getWordOfTheDay());
 
   const onGuessSubmit = () => {
     setCurrentGuessIndex(currentGuessIndex + 1);
@@ -28,10 +26,21 @@ const App = () => {
           isCurrentGuess={currentGuessIndex === index}
           onGuessSubmit={onGuessSubmit}
           key={index}
+          wordOfTheDay={wordOfTheDay}
         />
       ))}
     </Grid>
   );
 };
+
+export async function getStaticProps() {
+  const word = await getWordOfTheDay();
+
+  return {
+    props: {
+      wordOfTheDay: word.word,
+    },
+  };
+}
 
 export default App;
