@@ -26,6 +26,6 @@
     "prisma": "^3.14.0"
   },
   "prisma": {
-    "seed": "node prisma/seed.js"
+    "seed": "node -r esm prisma/seed.js"
   }
 }

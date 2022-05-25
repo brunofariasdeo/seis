@@ -7789,7 +7789,7 @@ const wordsObjects = [
   },
   {
     word: "babaca",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "babaço",
@@ -79013,4 +79013,4 @@ const wordsObjects = [
   },
 ];
 
-module.exports = { wordsObjects };
+export default wordsObjects;

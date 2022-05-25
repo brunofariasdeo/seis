@@ -1,5 +1,5 @@
-const { PrismaClient } = require("@prisma/client");
-const { wordsObjects } = require("./wordsObjects");
+import { PrismaClient } from "@prisma/client";
+import wordsObjects from "./wordsObjects";
 
 const prisma = new PrismaClient();
 
