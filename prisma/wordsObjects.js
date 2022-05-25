@@ -7805,7 +7805,7 @@ const wordsObjects = [
   },
   {
     word: "babado",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "babaré",
@@ -7841,7 +7841,7 @@ const wordsObjects = [
   },
   {
     word: "babona",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baboré",
@@ -7953,7 +7953,7 @@ const wordsObjects = [
   },
   {
     word: "bacias",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bacilo",
@@ -8185,7 +8185,7 @@ const wordsObjects = [
   },
   {
     word: "bagaço",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bagada",
@@ -8281,7 +8281,7 @@ const wordsObjects = [
   },
   {
     word: "baiacu",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baiagu",
@@ -8301,7 +8301,7 @@ const wordsObjects = [
   },
   {
     word: "baiano",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "Baical",
@@ -8325,11 +8325,11 @@ const wordsObjects = [
   },
   {
     word: "bailão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bailar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bailéu",
@@ -8341,7 +8341,7 @@ const wordsObjects = [
   },
   {
     word: "bainha",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baiona",
@@ -8361,7 +8361,7 @@ const wordsObjects = [
   },
   {
     word: "bairro",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baiuca",
@@ -8393,7 +8393,7 @@ const wordsObjects = [
   },
   {
     word: "baixos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bajacu",
@@ -8461,7 +8461,7 @@ const wordsObjects = [
   },
   {
     word: "balada",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "balafó",
@@ -8469,7 +8469,7 @@ const wordsObjects = [
   },
   {
     word: "balaio",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "balala",
@@ -8505,7 +8505,7 @@ const wordsObjects = [
   },
   {
     word: "balcão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "balção",
@@ -8537,7 +8537,7 @@ const wordsObjects = [
   },
   {
     word: "baldio",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baldos",
@@ -8549,15 +8549,15 @@ const wordsObjects = [
   },
   {
     word: "balear",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baleia",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "balela",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "balema",
@@ -8585,7 +8585,7 @@ const wordsObjects = [
   },
   {
     word: "baliza",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "balmaz",
@@ -8605,7 +8605,7 @@ const wordsObjects = [
   },
   {
     word: "balões",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "balofo",
@@ -8673,7 +8673,7 @@ const wordsObjects = [
   },
   {
     word: "bambas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bambiá",
@@ -8693,7 +8693,7 @@ const wordsObjects = [
   },
   {
     word: "bambus",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "Bamote",
@@ -8705,7 +8705,7 @@ const wordsObjects = [
   },
   {
     word: "banana",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "banano",
@@ -8737,7 +8737,7 @@ const wordsObjects = [
   },
   {
     word: "bancar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bâncio",
@@ -8765,7 +8765,7 @@ const wordsObjects = [
   },
   {
     word: "bandas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bandel",
@@ -8953,11 +8953,11 @@ const wordsObjects = [
   },
   {
     word: "barata",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "barato",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baraxu",
@@ -8997,7 +8997,7 @@ const wordsObjects = [
   },
   {
     word: "barcos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bardal",
@@ -9025,7 +9025,7 @@ const wordsObjects = [
   },
   {
     word: "bardos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "barege",
@@ -9117,7 +9117,7 @@ const wordsObjects = [
   },
   {
     word: "baroas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "baroce",
@@ -9157,11 +9157,11 @@ const wordsObjects = [
   },
   {
     word: "barrar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "barras",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "barrer",
@@ -9225,7 +9225,7 @@ const wordsObjects = [
   },
   {
     word: "basear",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "basela",
@@ -9285,11 +9285,11 @@ const wordsObjects = [
   },
   {
     word: "bastão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bastar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bastio",
@@ -9337,7 +9337,7 @@ const wordsObjects = [
   },
   {
     word: "batata",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "batatá",
@@ -9389,7 +9389,7 @@ const wordsObjects = [
   },
   {
     word: "batido",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "Batilo",
@@ -9529,7 +9529,7 @@ const wordsObjects = [
   },
   {
     word: "bazuca",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bdelar",
@@ -9593,7 +9593,7 @@ const wordsObjects = [
   },
   {
     word: "bebida",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bebiru",
@@ -9693,11 +9693,11 @@ const wordsObjects = [
   },
   {
     word: "beijar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "beijos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "beijus",
@@ -9805,7 +9805,7 @@ const wordsObjects = [
   },
   {
     word: "beleza",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "belgas",
@@ -9921,7 +9921,7 @@ const wordsObjects = [
   },
   {
     word: "benção",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bênção",
@@ -9997,7 +9997,7 @@ const wordsObjects = [
   },
   {
     word: "benzer",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "benzol",
@@ -10017,7 +10017,7 @@ const wordsObjects = [
   },
   {
     word: "béquer",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "beques",
@@ -10053,7 +10053,7 @@ const wordsObjects = [
   },
   {
     word: "berços",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bereba",
@@ -10173,7 +10173,7 @@ const wordsObjects = [
   },
   {
     word: "berrar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bérria",
@@ -10209,7 +10209,7 @@ const wordsObjects = [
   },
   {
     word: "bestas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "béstia",
@@ -10285,7 +10285,7 @@ const wordsObjects = [
   },
   {
     word: "bexiga",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bexuco",
@@ -10373,7 +10373,7 @@ const wordsObjects = [
   },
   {
     word: "bibelô",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bíbera",
@@ -10385,7 +10385,7 @@ const wordsObjects = [
   },
   {
     word: "bíblia",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "biblio",
@@ -10445,7 +10445,7 @@ const wordsObjects = [
   },
   {
     word: "bíceps",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bichão",
@@ -10465,7 +10465,7 @@ const wordsObjects = [
   },
   {
     word: "bichos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bicoco",
@@ -10585,7 +10585,7 @@ const wordsObjects = [
   },
   {
     word: "bigode",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bigodi",
@@ -10657,11 +10657,11 @@ const wordsObjects = [
   },
   {
     word: "bilhão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bilhar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bilião",
@@ -10801,7 +10801,7 @@ const wordsObjects = [
   },
   {
     word: "bípede",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bipene",
@@ -10809,7 +10809,7 @@ const wordsObjects = [
   },
   {
     word: "bíplex",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bipolo",
@@ -10901,11 +10901,11 @@ const wordsObjects = [
   },
   {
     word: "bisavó",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bisavô",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "biscar",
@@ -10929,7 +10929,7 @@ const wordsObjects = [
   },
   {
     word: "bisões",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bisotê",
@@ -10945,7 +10945,7 @@ const wordsObjects = [
   },
   {
     word: "bispos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "Bissal",
@@ -10965,7 +10965,7 @@ const wordsObjects = [
   },
   {
     word: "bistrô",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bitaco",
@@ -11093,7 +11093,7 @@ const wordsObjects = [
   },
   {
     word: "blefar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "blenda",
@@ -11109,7 +11109,7 @@ const wordsObjects = [
   },
   {
     word: "blocos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "blogar",
@@ -11121,7 +11121,7 @@ const wordsObjects = [
   },
   {
     word: "blusão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "boalvo",
@@ -11145,7 +11145,7 @@ const wordsObjects = [
   },
   {
     word: "boatos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bobata",
@@ -11185,7 +11185,7 @@ const wordsObjects = [
   },
   {
     word: "bocado",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "Bocage",
@@ -11373,7 +11373,7 @@ const wordsObjects = [
   },
   {
     word: "boiada",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "boiama",
@@ -11401,7 +11401,7 @@ const wordsObjects = [
   },
   {
     word: "boinas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "boinha",
@@ -11497,7 +11497,7 @@ const wordsObjects = [
   },
   {
     word: "bolada",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bolano",
@@ -11553,7 +11553,7 @@ const wordsObjects = [
   },
   {
     word: "boleia",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "Bolena",
@@ -11569,7 +11569,7 @@ const wordsObjects = [
   },
   {
     word: "boleto",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bolhão",
@@ -11605,7 +11605,7 @@ const wordsObjects = [
   },
   {
     word: "bolota",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bolsão",
@@ -11617,11 +11617,11 @@ const wordsObjects = [
   },
   {
     word: "bolsas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bolsos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bombal",
@@ -11633,11 +11633,11 @@ const wordsObjects = [
   },
   {
     word: "bombar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bombas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bômbax",
@@ -11653,7 +11653,7 @@ const wordsObjects = [
   },
   {
     word: "bombom",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bomoro",
@@ -11697,11 +11697,11 @@ const wordsObjects = [
   },
   {
     word: "boneca",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "boneco",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "boneja",
@@ -11737,11 +11737,11 @@ const wordsObjects = [
   },
   {
     word: "bonita",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bonito",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bonobo",
@@ -11797,19 +11797,19 @@ const wordsObjects = [
   },
   {
     word: "bordão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bordar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bordas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bordel",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bordos",
@@ -11817,7 +11817,7 @@ const wordsObjects = [
   },
   {
     word: "boreal",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bóreas",
@@ -11873,11 +11873,11 @@ const wordsObjects = [
   },
   {
     word: "borrão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "borrar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "borraz",
@@ -11957,11 +11957,11 @@ const wordsObjects = [
   },
   {
     word: "botija",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "botina",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "botino",
@@ -11973,7 +11973,7 @@ const wordsObjects = [
   },
   {
     word: "botões",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "botori",
@@ -12017,7 +12017,7 @@ const wordsObjects = [
   },
   {
     word: "bovino",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "boxear",
@@ -12065,7 +12065,7 @@ const wordsObjects = [
   },
   {
     word: "braços",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bracuí",
@@ -12077,7 +12077,7 @@ const wordsObjects = [
   },
   {
     word: "bradar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brádea",
@@ -12101,7 +12101,7 @@ const wordsObjects = [
   },
   {
     word: "braile",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bramar",
@@ -12113,11 +12113,11 @@ const wordsObjects = [
   },
   {
     word: "branca",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "branco",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "branha",
@@ -12145,7 +12145,7 @@ const wordsObjects = [
   },
   {
     word: "brasão",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brasar",
@@ -12153,7 +12153,7 @@ const wordsObjects = [
   },
   {
     word: "brasas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brasca",
@@ -12169,7 +12169,7 @@ const wordsObjects = [
   },
   {
     word: "brasio",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brasis",
@@ -12221,7 +12221,7 @@ const wordsObjects = [
   },
   {
     word: "brechó",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bredos",
@@ -12249,7 +12249,7 @@ const wordsObjects = [
   },
   {
     word: "brejos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brelhe",
@@ -12349,7 +12349,7 @@ const wordsObjects = [
   },
   {
     word: "brigar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brigue",
@@ -12361,15 +12361,15 @@ const wordsObjects = [
   },
   {
     word: "brilho",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brinca",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brinco",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brinço",
@@ -12381,7 +12381,7 @@ const wordsObjects = [
   },
   {
     word: "brinde",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brinje",
@@ -12449,11 +12449,11 @@ const wordsObjects = [
   },
   {
     word: "brocas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brocha",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brocos",
@@ -12517,7 +12517,7 @@ const wordsObjects = [
   },
   {
     word: "bronze",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bronzo",
@@ -12529,7 +12529,7 @@ const wordsObjects = [
   },
   {
     word: "brotar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bróteo",
@@ -12557,7 +12557,7 @@ const wordsObjects = [
   },
   {
     word: "bruços",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bruega",
@@ -12617,11 +12617,11 @@ const wordsObjects = [
   },
   {
     word: "brutal",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brutas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "brutaz",
@@ -12641,11 +12641,11 @@ const wordsObjects = [
   },
   {
     word: "bruxas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "bruxos",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "buamba",
@@ -12705,7 +12705,7 @@ const wordsObjects = [
   },
   {
     word: "buchas",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "buchim",
@@ -13021,7 +13021,7 @@ const wordsObjects = [
   },
   {
     word: "buraco",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "buramo",
@@ -13085,7 +13085,7 @@ const wordsObjects = [
   },
   {
     word: "burlar",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "burnir",
@@ -13109,7 +13109,7 @@ const wordsObjects = [
   },
   {
     word: "burros",
-    eligible: false,
+    eligible: true,
   },
   {
     word: "burucu",
