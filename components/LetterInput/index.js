@@ -27,6 +27,7 @@ const LetterInput = forwardRef(
   ) => {
     return (
       <TextField
+        autoComplete="off"
         className={clsx(
           POSITION_TO_STYLE[position],
           focused && !disabled && styles.focused
