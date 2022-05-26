@@ -30,7 +30,8 @@ const LetterInput = forwardRef(
         autoComplete="off"
         className={clsx(
           POSITION_TO_STYLE[position],
-          focused && !disabled && styles.focused
+          focused && !disabled && styles.focused,
+          !focused && !disabled && styles.unfocused
         )}
         classes={{ root: styles.letter }}
         disabled={disabled}
