@@ -2,6 +2,7 @@
   background-color: #939b9f;
   border-radius: 5px;
   box-sizing: border-box;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,9 +12,18 @@
   input {
     caret-color: transparent;
     color: white;
+    cursor: pointer;
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  &.disabled {
+    cursor: unset;
+
+    input {
+      cursor: unset;
+    }
   }
 }
 

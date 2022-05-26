@@ -41,6 +41,29 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
     }
   };
 
+  const handleClick = (event) => {
+    const getKeyByValue = (object, value) => {
+      return Object.keys(object).find((key) => object[key] === value);
+    };
+
+    const elementType = event.target.tagName;
+
+    if (elementType === "INPUT") {
+      const fieldName = event.target.name;
+      const fieldIndexString = getKeyByValue(NUMBER_TO_POSITION, fieldName);
+
+      setCurrentIndex(parseInt(fieldIndexString) - 1);
+    }
+
+    if (elementType === "DIV") {
+      const lastElementChild = event.target.lastChild.lastElementChild;
+      const fieldName = lastElementChild.name;
+      const fieldIndexString = getKeyByValue(NUMBER_TO_POSITION, fieldName);
+
+      setCurrentIndex(parseInt(fieldIndexString) - 1);
+    }
+  };
+
   const handleCloseToast = () => {
     setOpenToast(false);
   };
@@ -153,6 +176,7 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
             id={NUMBER_TO_POSITION[index + 1]}
             index={index}
             key={NUMBER_TO_POSITION[index + 1]}
+            onClick={(event) => handleClick(event)}
             onKeyDown={(event) => handleKeyDown(event)}
             onKeyPress={(event) => handleKeyPress(event)}
             position={checkPosition(index)}
