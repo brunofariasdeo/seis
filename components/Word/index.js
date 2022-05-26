@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import LetterInput from "../LetterInput";
 import wordsRaw from "../../util/wordsRaw";
+import clsx from "clsx";
 import styles from "./styles.module.scss";
 
 const ERROR_TO_MESSAGE = {
@@ -22,14 +23,13 @@ const NUMBER_TO_POSITION = {
 const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [error, setError] = useState("");
+  const [hasFound, setHasFound] = useState(false);
   const [isSubmitted, setIsSubmmited] = useState(false);
   const [letters, setLetters] = useState({});
   const [openToast, setOpenToast] = useState(false);
 
   const { getValues, handleSubmit, register, setValue } = useForm();
   const lettersRef = useRef([]);
-
-  const word = wordOfTheDay;
 
   const checkPosition = (index) => {
     if (isSubmitted) {
@@ -118,16 +118,24 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
 
   const onSubmit = (data) => {
     const keys = Object.keys(data);
+    const wordTyped = Object.values(data).join("");
 
     keys.forEach((key, index) => {
-      if (data[key] === word[index]) {
+      if (data[key] === wordOfTheDay[index]) {
         data[key] = { letter: data[key], position: "correct" };
-      } else if (data[key] !== word[index] && word.includes(data[key])) {
+      } else if (
+        data[key] !== wordOfTheDay[index] &&
+        wordOfTheDay.includes(data[key])
+      ) {
         data[key] = { letter: data[key], position: "incorrect" };
       } else {
         data[key] = { letter: data[key], position: "notFound" };
       }
     });
+
+    if (wordTyped === wordOfTheDay) {
+      setHasFound(true);
+    }
 
     setIsSubmmited(true);
     setLetters(data);
@@ -143,31 +151,26 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
   }, [currentIndex, isCurrentGuess]);
 
   useEffect(() => {
-    if (error) {
+    if (error || hasFound) {
       setOpenToast(true);
     } else {
       setOpenToast(false);
     }
-  }, [error]);
+  }, [error, hasFound]);
 
   return (
-    <Grid
-      alignItems="center"
-      classes={{
-        root: styles.container,
-      }}
-      container
-      direction="row"
-      justifyContent="center"
-    >
+    <Grid alignItems="center" container direction="row" justifyContent="center">
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         autoHideDuration={5000}
-        message={ERROR_TO_MESSAGE[error]}
+        message={hasFound ? "Nice!" : ERROR_TO_MESSAGE[error]}
         open={openToast}
         onClose={handleCloseToast}
       />
-      <form className={styles.wordForm} onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className={clsx(error ? styles.incorrectAttempt : "", styles.wordForm)}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         {[...Array(6)].map((_, index) => (
           <LetterInput
             disabled={!isCurrentGuess || isSubmitted}
