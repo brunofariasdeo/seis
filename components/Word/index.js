@@ -75,8 +75,15 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
   const handleKeyDown = (event) => {
     if (event.key === "Backspace") {
       if (currentIndex !== 0) {
-        setValue(NUMBER_TO_POSITION[currentIndex], "");
-        setCurrentIndex(currentIndex - 1);
+        if (
+          getValues(NUMBER_TO_POSITION[currentIndex + 1]) &&
+          currentIndex !== 6
+        ) {
+          setValue(NUMBER_TO_POSITION[currentIndex + 1], "");
+        } else {
+          setValue(NUMBER_TO_POSITION[currentIndex], "");
+          setCurrentIndex(currentIndex - 1);
+        }
       }
     }
   };
