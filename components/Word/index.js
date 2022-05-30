@@ -5,6 +5,7 @@ import LetterInput from "../LetterInput";
 import wordsRaw from "../../util/wordsRaw";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
+import normalizeSpecialCharacters from "../../util/normalizeSpecialCharacters";
 
 const ERROR_TO_MESSAGE = {
   empty: "Not enough letters",
@@ -91,18 +92,29 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
   const handleKeyPress = (event) => {
     setError("");
     if (event.key === "Enter") {
-      const wordTyped = Object.values(getValues()).join("");
-
-      const isEmpty = Object.values(getValues()).some(
+      const isInputEmpty = Object.values(getValues()).some(
         (letter) => letter === "" || letter === undefined
       );
 
-      if (isEmpty) {
+      if (isInputEmpty) {
         setError("empty");
         return;
       }
 
-      if (!wordsRaw.includes(wordTyped)) {
+      const wordEntered = Object.values(getValues()).join("");
+      const wordEnteredNormalized = normalizeSpecialCharacters(wordEntered);
+
+      const wordFromlist = wordsRaw
+        .filter(
+          (word) => wordEnteredNormalized === normalizeSpecialCharacters(word)
+        )
+        .shift();
+
+      if (wordFromlist) {
+        for (let i = 0; i < wordFromlist.length; i++) {
+          setValue(NUMBER_TO_POSITION[i + 1], wordFromlist[i]);
+        }
+      } else {
         setError("notFound");
         return;
       }

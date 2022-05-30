@@ -3709,7 +3709,6 @@ const wordsRaw = [
   "canato",
   "canavã",
   "cânave",
-  "cancão",
   "canção",
   "cancãs",
   "câncer",
