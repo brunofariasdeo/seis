@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import LetterInput from "../LetterInput";
 import wordsRaw from "../../util/wordsRaw";
+import normalizeSpecialCharacters from "../../util/normalizeSpecialCharacters";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
-import normalizeSpecialCharacters from "../../util/normalizeSpecialCharacters";
 
 const ERROR_TO_MESSAGE = {
   empty: "Not enough letters",
@@ -121,12 +121,13 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
 
       handleSubmit(onSubmit)();
     } else {
-      const regex = new RegExp("^[a-zA-Z\\s\u00C0-\u00FF]*$");
-      const isValidLetter = regex.test(event.key);
+      const regex = new RegExp("^[a-zA-Z\\s]*$");
+      const normalizedLetter = normalizeSpecialCharacters(event.key);
+      const isValidLetter = regex.test(normalizedLetter);
 
       if (isValidLetter) {
         if (currentIndex !== 6) {
-          setValue(NUMBER_TO_POSITION[currentIndex + 1], event.key);
+          setValue(NUMBER_TO_POSITION[currentIndex + 1], normalizedLetter);
           setCurrentIndex(currentIndex + 1);
         }
       } else {
