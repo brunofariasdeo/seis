@@ -36,7 +36,7 @@ const LetterInput = forwardRef(
         classes={{ root: styles.letter }}
         disabled={disabled}
         id={id}
-        inputProps={{ maxLength: 1 }}
+        inputProps={{ maxLength: 1, readOnly: true }}
         InputProps={{ disableUnderline: true }}
         inputRef={ref}
         ref={(element) => handleFocusChange(element, index)}
