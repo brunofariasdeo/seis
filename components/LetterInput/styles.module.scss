@@ -30,17 +30,17 @@
 
 .correct {
   animation: spin 1s ease;
-  background-color: #66a060;
+  background-color: #3aa394;
 }
 
 .incorrect {
   animation: spin 1s ease;
-  background-color: #ceb02c;
+  background-color: #d3ad69;
 }
 
 .notFound {
   animation: spin 1s ease;
-  background-color: #939b9f;
+  background-color: #596064;
 }
 
 .disabled {
@@ -49,7 +49,7 @@
 }
 
 .focused {
-  border-bottom: 5px solid rgba(62, 73, 78, 0.9) !important;
+  border-bottom: 0.3em solid rgba(62, 73, 78, 0.9) !important;
   transition: none;
 }
 

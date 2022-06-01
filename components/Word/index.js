@@ -21,7 +21,12 @@ const NUMBER_TO_POSITION = {
   6: "sixthLetter",
 };
 
-const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
+const Word = ({
+  isCurrentGuess,
+  onGuessSubmit,
+  virtualKeyPressed,
+  wordOfTheDay,
+}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [error, setError] = useState("");
   const [hasFound, setHasFound] = useState(false);
@@ -89,7 +94,7 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
     }
   };
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event, type) => {
     setError("");
     if (event.key === "Enter") {
       const isInputEmpty = Object.values(getValues()).some(
@@ -127,11 +132,16 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
 
       if (isValidLetter) {
         if (currentIndex !== 6) {
-          setValue(NUMBER_TO_POSITION[currentIndex + 1], normalizedLetter);
+          setValue(
+            NUMBER_TO_POSITION[currentIndex + 1],
+            normalizedLetter.toLowerCase()
+          );
           setCurrentIndex(currentIndex + 1);
         }
       } else {
-        event.preventDefault();
+        if (type !== "virtual") {
+          event.preventDefault();
+        }
       }
     }
   };
@@ -141,11 +151,17 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
     const wordTyped = Object.values(data).join("");
 
     keys.forEach((key, index) => {
-      if (data[key] === wordOfTheDay[index]) {
+      if (
+        normalizeSpecialCharacters(data[key]) ===
+        normalizeSpecialCharacters(wordOfTheDay[index])
+      ) {
         data[key] = { letter: data[key], position: "correct" };
       } else if (
-        data[key] !== wordOfTheDay[index] &&
-        wordOfTheDay.includes(data[key])
+        normalizeSpecialCharacters(data[key]) !==
+          normalizeSpecialCharacters(wordOfTheDay[index]) &&
+        normalizeSpecialCharacters(wordOfTheDay).includes(
+          normalizeSpecialCharacters(data[key])
+        )
       ) {
         data[key] = { letter: data[key], position: "incorrect" };
       } else {
@@ -177,6 +193,18 @@ const Word = ({ isCurrentGuess, onGuessSubmit, wordOfTheDay }) => {
       setOpenToast(false);
     }
   }, [error, hasFound]);
+
+  useEffect(() => {
+    const virtualKey = virtualKeyPressed.key;
+
+    if (virtualKey && isCurrentGuess) {
+      if (virtualKey !== "Backspace") {
+        handleKeyPress({ key: virtualKey }, "virtual");
+      } else {
+        handleKeyDown({ key: virtualKey }, "virtual");
+      }
+    }
+  }, [virtualKeyPressed]);
 
   return (
     <Grid alignItems="center" container direction="row" justifyContent="center">
