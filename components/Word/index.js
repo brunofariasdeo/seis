@@ -22,6 +22,7 @@ const NUMBER_TO_POSITION = {
 };
 
 const Word = ({
+  className,
   isCurrentGuess,
   onGuessSubmit,
   virtualKeyPressed,
@@ -219,7 +220,13 @@ const Word = ({
   }, [virtualKeyPressed]);
 
   return (
-    <Grid alignItems="center" container direction="row" justifyContent="center">
+    <Grid
+      alignItems="center"
+      className={className}
+      container
+      direction="row"
+      justifyContent="center"
+    >
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         autoHideDuration={5000}

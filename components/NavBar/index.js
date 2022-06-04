@@ -13,6 +13,7 @@ const NavBar = () => {
     <AppBar
       classes={{ colorPrimary: styles.colorPrimary, root: styles.appbar }}
       color="primary"
+      position="relative"
     >
       <Container maxWidth="xl">
         <Toolbar classes={{ root: styles.container }} disableGutters>

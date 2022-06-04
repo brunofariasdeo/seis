@@ -44,7 +44,7 @@ const App = ({ wordOfTheDay }) => {
       }}
       container
       direction="column"
-      justifyContent="center"
+      justifyContent="space-between"
       wrap="nowrap"
     >
       {isLoading ? (
@@ -52,15 +52,18 @@ const App = ({ wordOfTheDay }) => {
       ) : (
         <>
           <NavBar />
-          {[...Array(6)].map((_, index) => (
-            <Word
-              isCurrentGuess={currentGuessIndex === index}
-              onGuessSubmit={onGuessSubmit}
-              key={index}
-              virtualKeyPressed={virtualKeyPressed}
-              wordOfTheDay={wordOfTheDay}
-            />
-          ))}
+          <section>
+            {[...Array(6)].map((_, index) => (
+              <Word
+                className={styles.wordRow}
+                isCurrentGuess={currentGuessIndex === index}
+                onGuessSubmit={onGuessSubmit}
+                key={index}
+                virtualKeyPressed={virtualKeyPressed}
+                wordOfTheDay={wordOfTheDay}
+              />
+            ))}
+          </section>
           <Keyboard
             keyboardRef={(r) => (keyboard.current = r)}
             layoutName={"shift"}
