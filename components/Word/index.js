@@ -96,6 +96,7 @@ const Word = ({
 
   const handleKeyPress = (event, type) => {
     setError("");
+
     if (event.key === "Enter") {
       const isInputEmpty = Object.values(getValues()).some(
         (letter) => letter === "" || letter === undefined
@@ -125,7 +126,9 @@ const Word = ({
       }
 
       handleSubmit(onSubmit)();
-    } else {
+    }
+
+    if (event.key !== "Delete") {
       const regex = new RegExp("^[a-zA-Z\\s]*$");
       const normalizedLetter = normalizeSpecialCharacters(event.key);
       const isValidLetter = regex.test(normalizedLetter);
@@ -204,6 +207,7 @@ const Word = ({
         handleKeyDown({ key: virtualKey }, "virtual");
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [virtualKeyPressed]);
 
   return (
