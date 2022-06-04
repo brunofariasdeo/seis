@@ -4,6 +4,7 @@ import Word from "../components/Word";
 import Keyboard from "react-simple-keyboard";
 import getWordOfTheDay from "../prisma/getWordOfTheDay";
 import styles from "./Index.module.scss";
+import NavBar from "../components/NavBar";
 
 const App = ({ wordOfTheDay }) => {
   const [currentGuessIndex, setCurrentGuessIndex] = useState(0);
@@ -50,6 +51,7 @@ const App = ({ wordOfTheDay }) => {
         <CircularProgress />
       ) : (
         <>
+          <NavBar />
           {[...Array(6)].map((_, index) => (
             <Word
               isCurrentGuess={currentGuessIndex === index}

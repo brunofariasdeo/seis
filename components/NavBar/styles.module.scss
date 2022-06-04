@@ -1,0 +1,22 @@
+.appbar {
+  box-shadow: none !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.colorPrimary {
+  background-color: unset !important;
+}
+
+.kebab {
+  position: absolute !important;
+  right: 0;
+}
+
+.logoContainer {
+  color: #39393a;
+}
