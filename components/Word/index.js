@@ -92,6 +92,14 @@ const Word = ({
         }
       }
     }
+
+    if (event.key === "ArrowLeft" && currentIndex !== 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+
+    if (event.key === "ArrowRight" && currentIndex !== 5) {
+      setCurrentIndex(currentIndex + 1);
+    }
   };
 
   const handleKeyPress = (event, type) => {
