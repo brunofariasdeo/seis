@@ -25,7 +25,6 @@ a {
 
 // Virtual Keyboard styling
 .simple-keyboard {
-  margin-top: 5rem;
   max-width: 50rem;
 }
 
@@ -213,5 +212,11 @@ li.hg-candidate-box-list-item:active {
 @media only screen and (max-width: 600px) {
   .simple-keyboard {
     margin-top: 2.5rem;
+  }
+}
+
+@media only screen and (max-height: 1200px) {
+  .hg-theme-default .hg-button {
+    height: 3rem;
   }
 }
