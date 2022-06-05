@@ -22,6 +22,7 @@ const NUMBER_TO_POSITION = {
 };
 
 const Word = ({
+  checkLettersTried,
   className,
   isCurrentGuess,
   onGuessSubmit,
@@ -185,6 +186,7 @@ const Word = ({
       setHasFound(true);
     }
 
+    checkLettersTried(data);
     setIsSubmmited(true);
     setLetters(data);
     onGuessSubmit();

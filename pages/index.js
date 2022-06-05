@@ -9,8 +9,33 @@ import NavBar from "../components/NavBar";
 const App = ({ wordOfTheDay }) => {
   const [currentGuessIndex, setCurrentGuessIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [alphabetStatus, setAlphabetStatus] = useState({});
   const [virtualKeyPressed, setVirtualKeyPressed] = useState({ key: "" });
   const keyboard = useRef();
+
+  const checkLettersTried = (data) => {
+    const alphabet = { ...alphabetStatus };
+
+    for (const key of Object.keys(data)) {
+      if (alphabet[data[key]["letter"].toUpperCase()] !== "correct") {
+        alphabet[data[key]["letter"].toUpperCase()] = data[key]["position"];
+      }
+    }
+
+    setAlphabetStatus(alphabet);
+  };
+
+  const highlightKeys = (position) => {
+    const keysArray = [];
+
+    for (const key of Object.keys(alphabetStatus)) {
+      if (alphabetStatus[key] === position) {
+        keysArray.push(key);
+      }
+    }
+
+    return keysArray.join(" ");
+  };
 
   const onVirtualKeyboardPress = (button) => {
     const keyMapping = (button) => {
@@ -44,7 +69,7 @@ const App = ({ wordOfTheDay }) => {
       }}
       container
       direction="column"
-      justifyContent="space-between"
+      justifyContent={isLoading ? "center" : "space-between"}
       wrap="nowrap"
     >
       {isLoading ? (
@@ -55,6 +80,7 @@ const App = ({ wordOfTheDay }) => {
           <section>
             {[...Array(6)].map((_, index) => (
               <Word
+                checkLettersTried={checkLettersTried}
                 className={styles.wordRow}
                 isCurrentGuess={currentGuessIndex === index}
                 onGuessSubmit={onGuessSubmit}
@@ -74,6 +100,20 @@ const App = ({ wordOfTheDay }) => {
                 "Z X C V B N M {enter}",
               ],
             }}
+            buttonTheme={[
+              {
+                class: "hg-correct",
+                buttons: highlightKeys("correct"),
+              },
+              {
+                class: "hg-incorrect",
+                buttons: highlightKeys("incorrect"),
+              },
+              {
+                class: "hg-notFound",
+                buttons: highlightKeys("notFound"),
+              },
+            ]}
             onKeyPress={onVirtualKeyboardPress}
           />
         </>

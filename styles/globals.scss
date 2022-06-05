@@ -53,6 +53,18 @@ a {
   display: inline-block;
   flex-grow: 1;
 
+  &.hg-correct {
+    background-color: #297373;
+  }
+
+  &.hg-incorrect {
+    background-color: #ffa434;
+  }
+
+  &.hg-notFound {
+    background-color: #939b9f;
+  }
+
   &.hg-button-bksp {
     width: 3rem;
 
@@ -217,6 +229,6 @@ li.hg-candidate-box-list-item:active {
 
 @media only screen and (max-height: 1200px) {
   .hg-theme-default .hg-button {
-    height: 3rem;
+    height: 2.7rem;
   }
 }
