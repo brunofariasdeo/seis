@@ -1,41 +1,50 @@
 import prisma from "../lib/prisma";
 import getWordOfTheDay from "./getWordOfTheDay";
+import wordsObjects from "../prisma/wordsObjects";
 
 async function drawWordOfTheDay() {
-  const lastChosenWord = await getWordOfTheDay();
+  if (process.env.MODE === "production") {
+    const lastChosenWord = await getWordOfTheDay();
 
-  if (lastChosenWord) {
-    await prisma.word.update({
+    if (lastChosenWord) {
+      await prisma.word.update({
+        where: {
+          word: lastChosenWord.word,
+        },
+        data: {
+          wordOfTheDay: false,
+        },
+      });
+    }
+
+    const eligibleWords = await prisma.word.findMany({
       where: {
-        word: lastChosenWord.word,
-      },
-      data: {
-        wordOfTheDay: false,
+        chosenBefore: false,
+        eligible: true,
       },
     });
+
+    const wordOfTheDay =
+      eligibleWords[Math.floor(Math.random() * eligibleWords.length)];
+
+    await prisma.word.update({
+      where: {
+        word: wordOfTheDay.word,
+      },
+      data: {
+        chosenBefore: true,
+        wordOfTheDay: true,
+      },
+    });
+
+    return wordOfTheDay.word;
+  } else {
+    const eligibleWords = wordsObjects.filter((word) => word.eligible);
+    const randomWord =
+      eligibleWords[Math.floor(Math.random() * eligibleWords.length)];
+
+    return randomWord.word;
   }
-
-  const eligibleWords = await prisma.word.findMany({
-    where: {
-      chosenBefore: false,
-      eligible: true,
-    },
-  });
-
-  const wordOfTheDay =
-    eligibleWords[Math.floor(Math.random() * eligibleWords.length)];
-
-  await prisma.word.update({
-    where: {
-      word: wordOfTheDay.word,
-    },
-    data: {
-      chosenBefore: true,
-      wordOfTheDay: true,
-    },
-  });
-
-  return wordOfTheDay.word;
 }
 
 drawWordOfTheDay()
